@@ -1,0 +1,1200 @@
+// DDS internal representation file. DO NOT MODIFY!
+// Schema version: 10.01.00.00
+// edcmmg_acq
+
+cDefine DEFAULT_DIVISOR_EDCMMG {
+	value = 
+		valString {
+			value = "1.0F";
+		}
+	defFile = cFile 'edcmmg_acq_decl.h';
+	description = 
+		mlString {
+			value = "Default divisor - needed for division by 0 protection ";
+			language = language en;
+		}
+	displayStringValueAsTokenString = boolean true;
+}
+
+cDefine DEFAULT_ZERO_VALUE_EDCMMG {
+	value = 
+		valString {
+			value = "0.0F";
+		}
+	defFile = cFile 'edcmmg_acq_decl.h';
+	description = 
+		mlString {
+			value = "Default 0.0F value for initialization in EDCMMG Unit.";
+			language = language en;
+		}
+	displayStringValueAsTokenString = boolean true;
+}
+
+cDefine STANDBY_CUR_LIM {
+	value = 
+		valString {
+			value = "0.0F";
+		}
+	defFile = cFile 'edcmmg_acq_decl.h';
+	description = 
+		mlString {
+			value = "Limit for standby/idle";
+			language = language en;
+		}
+	displayStringValueAsTokenString = boolean true;
+}
+
+
+cDefine CAN_BUCK {
+	value = 
+		valString {
+			value = "1U";
+		}
+	defFile = cFile 'edcmmg_acq_decl.h';
+	description = 
+		mlString {
+			value = "CAN feedback Buck state";
+			language = language en;
+		}
+	displayStringValueAsTokenString = boolean true;
+}
+
+cDefine CAN_PRECHARGE {
+	value = 
+		valString {
+			value = "2U";
+		}
+	defFile = cFile 'edcmmg_acq_decl.h';
+	description = 
+		mlString {
+			value = "CAN feedback Precharge state";
+			language = language en;
+		}
+	displayStringValueAsTokenString = boolean true;
+}
+
+cDefine CAN_STANDBY {
+	value = 
+		valString {
+			value = "0U";
+		}
+	defFile = cFile 'edcmmg_acq_decl.h';
+	description = 
+		mlString {
+			value = "CAN feedback Standby state";
+			language = language en;
+		}
+	displayStringValueAsTokenString = boolean true;
+}
+
+cDefine ENA_BOOST {
+	value = 
+		valString {
+			value = "64U";
+		}
+	defFile = cFile 'edcmmg_acq_decl.h';
+	description = 
+		mlString {
+			value = "Enable Boost state transition";
+			language = language en;
+		}
+	displayStringValueAsTokenString = boolean true;
+}
+
+cDefine ENA_BUCK {
+	value = 
+		valString {
+			value = "128U";
+		}
+	defFile = cFile 'edcmmg_acq_decl.h';
+	description = 
+		mlString {
+			value = "Enable Buck state transition";
+			language = language en;
+		}
+	displayStringValueAsTokenString = boolean true;
+}
+
+cDefine ENA_ERROR {
+	value = 
+		valString {
+			value = "1U";
+		}
+	defFile = cFile 'edcmmg_acq_decl.h';
+	description = 
+		mlString {
+			value = "Enable Error state transition";
+			language = language en;
+		}
+	displayStringValueAsTokenString = boolean true;
+}
+
+cDefine ENA_LIH {
+	value = 
+		valString {
+			value = "2U";
+		}
+	defFile = cFile 'edcmmg_acq_decl.h';
+	description = 
+		mlString {
+			value = "Enable Limp Home state transition";
+			language = language en;
+		}
+	displayStringValueAsTokenString = boolean true;
+}
+
+cDefine ENA_LIH_BCK {
+	value = 
+		valString {
+			value = "130U";
+		}
+	defFile = cFile 'edcmmg_acq_decl.h';
+	description = 
+		mlString {
+			value = "Enable Limp Home state transition from Buck state";
+			language = language en;
+		}
+	displayStringValueAsTokenString = boolean true;
+}
+
+cDefine ENA_PREC {
+	value = 
+		valString {
+			value = "8U";
+		}
+	defFile = cFile 'edcmmg_acq_decl.h';
+	description = 
+		mlString {
+			value = "Enable Precharge  state transition";
+			language = language en;
+		}
+	displayStringValueAsTokenString = boolean true;
+}
+
+cDefine ENA_PREC_HS {
+	value = 
+		valString {
+			value = "16U";
+		}
+	defFile = cFile 'edcmmg_acq_decl.h';
+	description = 
+		mlString {
+			value = "Enable Precharge high side state transition";
+			language = language en;
+		}
+	displayStringValueAsTokenString = boolean true;
+}
+
+cDefine ENA_PREC_LS {
+	value = 
+		valString {
+			value = "32U";
+		}
+	defFile = cFile 'edcmmg_acq_decl.h';
+	description = 
+		mlString {
+			value = "Enable Precharge low side state transition";
+			language = language en;
+		}
+	displayStringValueAsTokenString = boolean true;
+}
+
+cDefine ENA_STB {
+	value = 
+		valString {
+			value = "4U";
+		}
+	defFile = cFile 'edcmmg_acq_decl.h';
+	description = 
+		mlString {
+			value = "Enable Standby state transition";
+			language = language en;
+		}
+	displayStringValueAsTokenString = boolean true;
+}
+
+cDefine FLT_EPSILON_EDCMMG {
+	value = 
+		valString {
+			value = "0.0000000001F";
+		}
+	defFile = cFile 'edcmmg_acq_decl.h';
+	description = 
+		mlString {
+			value = "Value for machine epsilon that represents the maximum relative error of the chosen rounding precedure.";
+			language = language en;
+		}
+	displayStringValueAsTokenString = boolean true;
+	visible = boolean true;
+}
+
+cDefine ACTIVE {
+	value = 
+		valString {
+			value = "1U";
+		}
+	defFile = cFile 'edcmmg_acq_decl.h';
+	displayStringValueAsTokenString = boolean true;
+}
+
+cDefine INACTIVE {
+	value = 
+		valString {
+			value = "0U";
+		}
+	defFile = cFile 'edcmmg_acq_decl.h';
+	displayStringValueAsTokenString = boolean true;
+}
+
+cDefine PREC_CTR_RST {
+	value = 
+		valString {
+			value = "0U";
+		}
+	defFile = cFile 'edcmmg_acq_decl.h';
+	description = 
+		mlString {
+			value = "Precharge counter reset.";
+			language = language en;
+		}
+	displayStringValueAsTokenString = boolean true;
+}
+
+cDefine ZERO_DIV_EDCMMG {
+	value = 
+		valString {
+			value = "0.0F";
+		}
+	defFile = cFile 'edcmmg_acq_decl.h';
+	description = 
+		mlString {
+			value = "Define used to compare the divisor. ";
+			language = language en;
+		}
+	displayStringValueAsTokenString = boolean true;
+	visible = boolean true;
+}
+
+cFile 'edcmmg_acq_decl.h' {
+	subsystem = subsystem EDCMMG;
+	isHeader = boolean true;
+}
+
+cFile 'edcmmg_acq_def.c' {
+	subsystem = subsystem EDCMMG;
+	includes = cFile 'general.h';
+}
+
+calFunction CAS_EDCMMG_ACQ {
+	displayName = 
+		mlString {
+			value = "EDCMMG";
+		}
+}
+
+online bEnaLihInp {
+	isVolatile = boolean false;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion RAM_CORE_0;
+	elemType = numberType boolean;
+	update = onlineUpdate '10ms';
+	numFormat = numFormat '%1.0f';
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_DATA_BOOLEAN_QM_LOCAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_DATA_BOOLEAN_QM_LOCAL_EDCMMG;
+		}
+	conversion = conversion BOOL_VERBAL;
+	mappingScheme = mappingSchemeOnline __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG_ACQ;
+	description = 
+		mlString {
+			value = "Enabling input setpoints for Limp-Home state(1:input, 0:calibrations)";
+			language = language en;
+		}
+}
+
+online bPrecToutSt {
+	value = 
+		valReal {
+			value = 0;
+		}
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion INT_RAM;
+	elemType = numberType boolean;
+	update = onlineUpdate '10ms';
+	numFormat = numFormat '%1.0f';
+	physUnit = physUnit '-';
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_DATA_BOOLEAN_QM_GLOBAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_DATA_BOOLEAN_QM_GLOBAL_EDCMMG;
+		}
+	conversion = conversion 'LINEAR     [0.000000, 0H] [1.000000, 1H]';
+	mappingScheme = mappingSchemeOnline '20';
+	description = 
+		mlString {
+			value = "Precharge timeout Status.";
+			language = language en;
+		}
+}
+
+online f32CurLimHsExt {
+	isVolatile = boolean false;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion RAM_CORE_0;
+	elemType = numberType float32;
+	update = onlineUpdate '10ms';
+	numFormat = numFormat '%11.2f';
+	physUnit = physUnit A;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeOnline __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG_ACQ;
+	description = 
+		mlString {
+			value = "High side current limitation for Mode Manager component";
+			language = language en;
+		}
+}
+
+online f32CurLimHsLih {
+	isVolatile = boolean false;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion RAM_CORE_0;
+	elemType = numberType float32;
+	update = onlineUpdate '10ms';
+	numFormat = numFormat '%11.2f';
+	physUnit = physUnit A;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeOnline __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG_ACQ;
+	description = 
+		mlString {
+			value = "High side current setpoint in Limp-Home state";
+			language = language en;
+		}
+}
+
+online f32CurLimHsPrec {
+	isVolatile = boolean false;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion RAM_CORE_0;
+	elemType = numberType float32;
+	update = onlineUpdate '10ms';
+	numFormat = numFormat '%11.2f';
+	physUnit = physUnit A;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeOnline __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG_ACQ;
+	description = 
+		mlString {
+			value = "High side current setpoint in Precharge high side state";
+			language = language en;
+		}
+}
+
+online f32CurLimLsExt {
+	isVolatile = boolean false;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion RAM_CORE_0;
+	elemType = numberType float32;
+	update = onlineUpdate '10ms';
+	numFormat = numFormat '%11.2f';
+	physUnit = physUnit A;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeOnline __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG_ACQ;
+	description = 
+		mlString {
+			value = "Low side current limitation for Mode Manager component";
+			language = language en;
+		}
+}
+
+online f32CurLimLsLih {
+	isVolatile = boolean false;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion RAM_CORE_0;
+	elemType = numberType float32;
+	update = onlineUpdate '10ms';
+	numFormat = numFormat '%11.2f';
+	physUnit = physUnit A;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeOnline __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG_ACQ;
+	description = 
+		mlString {
+			value = "Low side current setpoint in Limp-Home state";
+			language = language en;
+		}
+}
+
+online f32CurLimLsPrec {
+	isVolatile = boolean false;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion RAM_CORE_0;
+	elemType = numberType float32;
+	update = onlineUpdate '10ms';
+	numFormat = numFormat '%11.2f';
+	physUnit = physUnit A;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeOnline __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG_ACQ;
+	description = 
+		mlString {
+			value = "Low side current setpoint in Precharge high side state";
+			language = language en;
+		}
+}
+
+online f32VoltMesHs {
+	isVolatile = boolean false;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion RAM_CORE_0;
+	elemType = numberType float32;
+	update = onlineUpdate '10ms';
+	numFormat = numFormat '%11.2f';
+	physUnit = physUnit V;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeOnline __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG_ACQ;
+	description = 
+		mlString {
+			value = "High side measured voltage for Mode Manager component";
+			language = language en;
+		}
+}
+
+online f32VoltMesLs {
+	isVolatile = boolean false;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion RAM_CORE_0;
+	elemType = numberType float32;
+	update = onlineUpdate '10ms';
+	numFormat = numFormat '%11.2f';
+	physUnit = physUnit V;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeOnline __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG_ACQ;
+	description = 
+		mlString {
+			value = "Low side measured voltage for Mode Manager component";
+			language = language en;
+		}
+}
+
+online f32VoltSpHsExt {
+	isVolatile = boolean false;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion RAM_CORE_0;
+	elemType = numberType float32;
+	update = onlineUpdate '10ms';
+	numFormat = numFormat '%11.2f';
+	physUnit = physUnit V;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeOnline __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG_ACQ;
+	description = 
+		mlString {
+			value = "High side voltage Limitation for Mode Manager component";
+			language = language en;
+		}
+}
+
+online f32VoltSpHsLih {
+	isVolatile = boolean false;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion RAM_CORE_0;
+	elemType = numberType float32;
+	update = onlineUpdate '10ms';
+	numFormat = numFormat '%11.2f';
+	physUnit = physUnit V;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeOnline __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG_ACQ;
+	description = 
+		mlString {
+			value = "High side voltage setpoint in Limp-Home state";
+			language = language en;
+		}
+}
+
+online f32VoltSpLsExt {
+	isVolatile = boolean false;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion RAM_CORE_0;
+	elemType = numberType float32;
+	update = onlineUpdate '10ms';
+	numFormat = numFormat '%11.2f';
+	physUnit = physUnit V;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeOnline __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG_ACQ;
+	description = 
+		mlString {
+			value = "Low side voltage Limitation for Mode Manager component";
+			language = language en;
+		}
+}
+
+online f32VoltSpLsLih {
+	isVolatile = boolean false;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion RAM_CORE_0;
+	elemType = numberType float32;
+	update = onlineUpdate '10ms';
+	numFormat = numFormat '%11.2f';
+	physUnit = physUnit V;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_DATA_32BIT_QM_LOCAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeOnline __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG_ACQ;
+	description = 
+		mlString {
+			value = "Low side voltage setpoint in Limp-Home state";
+			language = language en;
+		}
+}
+
+online u16PrecToutCtr {
+	value = 
+		valReal {
+			value = 0;
+		}
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion INT_RAM;
+	elemType = numberType uint16;
+	update = onlineUpdate '10ms';
+	numFormat = numFormat '%5.0f';
+	physUnit = physUnit '-';
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_DATA_16BIT_QM_GLOBAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_DATA_16BIT_QM_GLOBAL_EDCMMG;
+		}
+	conversion = conversion 'LINEAR     [0.000000, 0H] [65535.00000, FFFFH]';
+	mappingScheme = mappingSchemeOnline '20';
+	description = 
+		mlString {
+			value = "Precharge timeout Counter.";
+			language = language en;
+		}
+}
+
+online bEnaIdle {
+  isVolatile = boolean false;
+  declFile = cFile 'edcmmg_acq_decl.h';
+  defFile = cFile 'edcmmg_acq_def.c';
+  memoryRegion = memRegion RAM;
+  elemType = numberType boolean;
+  update = onlineUpdate '10ms';
+  bitMask = 1;
+  sourceSection = 
+    sourceSectionRef {
+      declFile = sourceSection IOPT_MEMMAP_DATA_BOOLEAN_QM_LOCAL_EDCMMG;
+      defFile = sourceSection IOPT_MEMMAP_DATA_BOOLEAN_QM_LOCAL_EDCMMG;
+    }
+  mappingScheme = mappingSchemeOnline '20';
+  calFunction = calFunction CAS_EDCMMG;
+  description = 
+    mlString {
+      value = "Enables the transition to Idle\r\nTRUE - transition enabled\r\nFALSE - transition disabled\r\n";
+      language = language en;
+    }
+}
+
+online u8TranEna {
+	isVolatile = boolean false;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion RAM_CORE_0;
+	elemType = numberType uint8;
+	numFormat = numFormat '%3.0f';
+	physUnit = physUnit '-';
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_DATA_8BIT_QM_LOCAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_DATA_8BIT_QM_LOCAL_EDCMMG;
+		}
+	conversion = conversion 'LINEAR     [0.000000, 0H] [255.000000, FFH]';
+	mappingScheme = mappingSchemeOnline __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG_ACQ;
+	description = 
+		mlString {
+			value = "Enabled Transitions";
+			language = language en;
+		}
+}
+
+parameter cbStTranEnaLih_C {
+	value = 
+		valReal {
+			value = 0;
+		}
+	isConst = boolean true;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion ROM;
+	elemType = numberType boolean;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_CAL_BOOLEAN_QM_GLOBAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_CAL_BOOLEAN_QM_GLOBAL_EDCMMG;
+		}
+	conversion = conversion 'LINEAR     [0.000000, 0H] [1.000000, 1H]';
+	mappingScheme = mappingSchemeParameter '20';
+	calFunction = calFunction CAS_EDCMMG;
+	description = 
+		mlString {
+			value = "Status of transition to Limp Home.";
+			language = language en;
+		}
+}
+
+parameter cf32CurLimLsHsPrec_C {
+	value = 
+		valReal {
+			value = 100;
+		}
+	isConst = boolean true;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion ROM;
+	elemType = numberType float32;
+	invisible = boolean false;
+	untunable = boolean false;
+	adaptive = boolean false;
+	numFormat = numFormat '%10.5f';
+	physUnit = physUnit A;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeParameter __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG;
+	description = 
+		mlString {
+			value = "Calibration from ASW layer with value 100.0F used for current limit on Precharge, Clamping Lowside and Clamping Highside";
+			language = language en;
+		}
+}
+
+parameter cf32CurLimMaxLsThd_C {
+	value = 
+		valReal {
+			value = 100;
+		}
+	isConst = boolean true;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion ROM;
+	elemType = numberType float32;
+	numFormat = numFormat '%10.5f';
+	physUnit = physUnit A;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeParameter '20';
+	description = 
+		mlString {
+			value = "Low side current limit maximum threshold.";
+			language = language en;
+		}
+}
+
+parameter cf32PowEff_C {
+	value = 
+		valReal {
+			value = 0.95;
+		}
+	isConst = boolean true;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion ROM;
+	elemType = numberType float32;
+	invisible = boolean false;
+	untunable = boolean false;
+	adaptive = boolean false;
+	numFormat = numFormat '%10.5f';
+	physUnit = physUnit '%';
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeParameter __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG;
+	description = 
+		mlString {
+			value = "Calibration from ASW layer with value 0.95. Used to calculate the current limit for BUCK mode using the formula: ( 48_Power_LIMIT * cf32PowEff_C) / External_V12";
+			language = language en;
+		}
+}
+
+parameter cf32VoltDifHsThd_C {
+	value = 
+		valReal {
+			value = 1.5;
+		}
+	isConst = boolean true;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion ROM;
+	elemType = numberType float32;
+	invisible = boolean false;
+	untunable = boolean false;
+	adaptive = boolean false;
+	numFormat = numFormat '%10.5f';
+	physUnit = physUnit V;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeParameter __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG;
+	description = 
+		mlString {
+			value = "Difference between external high side voltage and internal high side voltage threshold";
+			language = language en;
+		}
+}
+
+parameter cf32VoltDifLsThd_C {
+	value = 
+		valReal {
+			value = 1.5;
+		}
+	isConst = boolean true;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion ROM;
+	elemType = numberType float32;
+	invisible = boolean false;
+	untunable = boolean false;
+	adaptive = boolean false;
+	numFormat = numFormat '%10.5f';
+	physUnit = physUnit V;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeParameter __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG;
+	description = 
+		mlString {
+			value = "Difference between external low side voltage and internal low side voltage threshold";
+			language = language en;
+		}
+}
+
+parameter cf32VoltMaxExtHsLihThd_C {
+	value = 
+		valReal {
+			value = 52;
+		}
+	isConst = boolean true;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion ROM;
+	elemType = numberType float32;
+	invisible = boolean false;
+	untunable = boolean false;
+	adaptive = boolean false;
+	numFormat = numFormat '%10.5f';
+	physUnit = physUnit V;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeParameter __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG;
+	description = 
+		mlString {
+			value = "Maximum high side threshold used for transitioning from Standby to Buck.";
+			language = language en;
+		}
+}
+
+parameter cf32VoltMaxExtLsThd_C {
+	value = 
+		valReal {
+			value = 16;
+		}
+	isConst = boolean true;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion ROM;
+	elemType = numberType float32;
+	invisible = boolean false;
+	untunable = boolean false;
+	adaptive = boolean false;
+	numFormat = numFormat '%10.5f';
+	physUnit = physUnit V;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeParameter __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG;
+	description = 
+		mlString {
+			value = "Low side external voltage max threshold";
+			language = language en;
+		}
+}
+
+parameter cf32VoltMaxExtHsThd_C {
+	value = 
+		valReal {
+			value = 56;
+		}
+	isConst = boolean true;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion ROM;
+	elemType = numberType float32;
+	invisible = boolean false;
+	untunable = boolean false;
+	adaptive = boolean false;
+	numFormat = numFormat '%10.5f';
+	physUnit = physUnit V;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeParameter __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG;
+	description = 
+		mlString {
+			value = "Low side external voltage max threshold";
+			language = language en;
+		}
+}
+
+parameter cf32VoltMinExtHsThd_C {
+	value = 
+		valReal {
+			value = 24;
+		}
+	isConst = boolean true;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion ROM;
+	elemType = numberType float32;
+	invisible = boolean false;
+	untunable = boolean false;
+	adaptive = boolean false;
+	numFormat = numFormat '%10.5f';
+	physUnit = physUnit V;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeParameter __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG;
+	description = 
+		mlString {
+			value = "Low side external voltage max threshold";
+			language = language en;
+		}
+}
+
+parameter cf32VoltMaxSpHsThd_C {
+	value = 
+		valReal {
+			value = 54;
+		}
+	isConst = boolean true;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion ROM;
+	elemType = numberType float32;
+	invisible = boolean false;
+	untunable = boolean false;
+	adaptive = boolean false;
+	numFormat = numFormat '%10.5f';
+	physUnit = physUnit V;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeParameter __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG;
+	description = 
+		mlString {
+			value = "High side voltage setpoint max threshold";
+			language = language en;
+		}
+}
+
+parameter cf32VoltMaxSpLsThd_C {
+	value = 
+		valReal {
+			value = 15.5;
+		}
+	isConst = boolean true;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion ROM;
+	elemType = numberType float32;
+	invisible = boolean false;
+	untunable = boolean false;
+	adaptive = boolean false;
+	numFormat = numFormat '%10.5f';
+	physUnit = physUnit V;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeParameter __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG;
+	description = 
+		mlString {
+			value = "Low side voltage setpoint max threshold";
+			language = language en;
+		}
+}
+
+parameter cf32VoltMinExtHsLihThd_C {
+	value = 
+		valReal {
+			value = 26;
+		}
+	isConst = boolean true;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion ROM;
+	elemType = numberType float32;
+	invisible = boolean false;
+	untunable = boolean false;
+	adaptive = boolean false;
+	numFormat = numFormat '%10.5f';
+	physUnit = physUnit V;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeParameter __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG;
+	description = 
+		mlString {
+			value = "Minimum high side threshold used for transitioning from Standby to Buck.";
+			language = language en;
+		}
+}
+
+parameter cf32VoltMinExtLsThd_C {
+	value = 
+		valReal {
+			value = 6;
+		}
+	isConst = boolean true;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion ROM;
+	elemType = numberType float32;
+	invisible = boolean false;
+	untunable = boolean false;
+	adaptive = boolean false;
+	numFormat = numFormat '%10.5f';
+	physUnit = physUnit V;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeParameter __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG;
+	description = 
+		mlString {
+			value = "Low side external voltage min threshold";
+			language = language en;
+		}
+}
+
+parameter cf32VoltMinSpHsThd_C {
+	value = 
+		valReal {
+			value = 24;
+		}
+	isConst = boolean true;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion ROM;
+	elemType = numberType float32;
+	invisible = boolean false;
+	untunable = boolean false;
+	adaptive = boolean false;
+	numFormat = numFormat '%10.5f';
+	physUnit = physUnit V;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeParameter __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG;
+	description = 
+		mlString {
+			value = "High side voltage setpoint min threshold";
+			language = language en;
+		}
+}
+
+parameter cf32VoltMinSpLsThd_C {
+	value = 
+		valReal {
+			value = 12;
+		}
+	isConst = boolean true;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion ROM;
+	elemType = numberType float32;
+	invisible = boolean false;
+	untunable = boolean false;
+	adaptive = boolean false;
+	numFormat = numFormat '%10.5f';
+	physUnit = physUnit V;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeParameter __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG;
+	description = 
+		mlString {
+			value = "Low side voltage setpoint min threshold";
+			language = language en;
+		}
+}
+
+parameter cf32VoltSpLsLihAcq_C {
+	value = 
+		valReal {
+			value = 13.4;
+		}
+	isConst = boolean true;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion ROM;
+	elemType = numberType float32;
+	invisible = boolean false;
+	untunable = boolean false;
+	adaptive = boolean false;
+	numFormat = numFormat '%10.5f';
+	physUnit = physUnit V;
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_CAL_32BIT_QM_GLOBAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeParameter __DDS__Normal;
+	calFunction = calFunction CAS_EDCMMG;
+	description = 
+		mlString {
+			value = "12VSetpoint used for limp home state required by control algorithm.";
+			language = language en;
+		}
+}
+
+parameter cu16PrecToutThd_C {
+	value = 
+		valReal {
+			value = 300;
+		}
+	isConst = boolean true;
+	declFile = cFile 'edcmmg_acq_decl.h';
+	defFile = cFile 'edcmmg_acq_def.c';
+	memoryRegion = memRegion ROM;
+	elemType = numberType uint16;
+	numFormat = numFormat '%5.0f';
+	physUnit = physUnit '-';
+	sourceSection = 
+		sourceSectionRef {
+			declFile = sourceSection IOPT_MEMMAP_CAL_16BIT_QM_GLOBAL_EDCMMG;
+			defFile = sourceSection IOPT_MEMMAP_CAL_16BIT_QM_GLOBAL_EDCMMG;
+		}
+	mappingScheme = mappingSchemeParameter '20';
+	description = 
+		mlString {
+			value = "Precharge timeout threshold.";
+			language = language en;
+		}
+}
+
